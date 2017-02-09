@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title></title>
+
+	<script>  
+
+	    function clickone(){
+	    	var result = myObj.getPwd("111");  
+	        alert("one method result:"+result);
+	    }
+
+	    function clicktwo(){
+	    	document.location = "BaiDuMobileGameJsLoad://demo?faction=show";
+	    }
+
+	    function clickthree(){
+	    	var result=prompt("js://demo?faction=show","");
+	    	alert("two method result:"+result);
+	    }
+	    
+	    function clicktworesult(result){
+	    	alert("result:"+JSON.stringify(result));
+	    }
+
+    </script> 
+
+    <style type="text/css">
+    	input{
+    		width: 150px;
+    		height: 40px;
+    		margin: 5px;
+    	}
+    </style>
+
+</head>
+
+<body>
+	<div class="inputstyle">
+		<input type="submit" name="invoke" id="one" value="addJavascriptInterface"  onclick="clickone()">
+	</div>
+	<div class="inputstyle">
+		<input type="submit" name="invoke" id="two" value="shouldOverrideUrlLoading" onclick="clicktwo()">
+	</div>
+	<div class="inputstyle">
+		<input type="submit" name="invoke" id="three" value="onJsPrompt" onclick="clickthree()">
+	</div>
+
+	<!--<h1><div id="content">内容显示</div></h1>-->
+	<!--<br/>-->
+	<!--<input type="button"  value="点击调用java代码" onclick="window.android.startFunction()" />-->
+	<!--<br/>-->
+	<!--<input type="button"  value="点击调用java代码并传递参数" onclick="window.android.startFunction('http://blog.csdn.net/Leejizhou')"  />-->
+
+
+</body>
+</html>
